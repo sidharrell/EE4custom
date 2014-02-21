@@ -289,7 +289,7 @@ class EEW_Custom_Upcoming_Events  extends WP_Widget {
 
 				// In the event list, the $post is the last event in the list
 				// https://events.codebasehq.com/projects/event-espresso/tickets/5275
-				$post_id = $_GET['espresso_events'] === $post->post_name ? $post->ID : NULL;
+				$post_id = isset($_GET['espresso_events']) && $_GET['espresso_events'] === $post->post_name ? $post->ID : NULL;
 				
 				if ( ! empty( $events )) {
 					echo '<ul class="ee-upcoming-events-widget-ul">';
