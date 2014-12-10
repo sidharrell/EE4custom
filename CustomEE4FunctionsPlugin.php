@@ -8,7 +8,9 @@
  * Author URI: http://sidneyharrell.com
  * License: GPL2
  */
-add_filter('FHEE_EEG_Paypal_Standard_set_redirection_info_arguments', 'add_my_field');
+
+add_filter('FHEE__EEG_Paypal_Standard__set_redirection_info__arguments', 'add_my_field');
+
 function add_my_field($redirect_args) {
     $redirect_args['handling'] = '4.2';
     return $redirect_args;
