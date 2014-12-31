@@ -10,10 +10,6 @@ function espresso_track_successful_sale( $Transaction, $reg_msg, $from_admin ){
 				$email = $Attendee->email();
 				$referrer = $_COOKIE['ap_id'];
 				do_action('wp_affiliate_process_cart_commission', array("referrer" => $referrer, "sale_amt" =>$sale_amt, "txn_id"=>$unique_transaction_id, "buyer_email"=>$email));
-				write_log($referrer);
-				write_log($sale_amt);
-				write_log($unique_transaction_id);
-				write_log($email);
 			}
 		}
 	}
